@@ -1,4 +1,4 @@
-data(iris) # データセットirisの読み込み
+data(iris)   # データセットirisの読み込み
 train.index <- sample(nrow(iris),nrow(iris)*0.7)  # 7割の例題を訓練データとして用いる
 library(MASS) # パッケージMASSの読み込み
 res.lda <- lda(Species~.,iris,subset=train.index,method="moment") # フィッシャーの判別分析
